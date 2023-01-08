@@ -15,3 +15,14 @@
        9   Kernel routines [Non standard]
 
     Hence $ man printf if for the "printf" shell command, while $ man 3 printf is for the printf() function in C library.
+
+3) Separate each command by semicolon (;).
+
+4) using a backslash:
+   ```$ ls \
+   > -l```
+   
+5,6,7) Ctrl - D signals EOF (end of file). ^D told the shell that you weren't going to type any more commands.
+       Ctrl - C means "interrupt", it terminates the command.
+       
+8) The first `wc` takes output of `ls -l` as its input, and the corresponding output is piped into the second `wc` as its input.
