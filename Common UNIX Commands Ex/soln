@@ -34,4 +34,6 @@
    e)`du -sm` displays total size in MBs.
    f)`du -sh` displays total size in appropriate unit (KB,MB,GB).
    
-   
+*10) 'd' file type indicates directory.
+    'c' file type indicates character special file.
+    'l' file type indicates symbolic link.
