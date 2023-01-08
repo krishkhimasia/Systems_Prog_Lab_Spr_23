@@ -26,3 +26,12 @@
        Ctrl - C means "interrupt", it terminates the command.
        
 8) The first `wc` takes output of `ls -l` as its input, and the corresponding output is piped into the second `wc` as its input.
+
+9) a)`du` estimates file space usage, but lists only space taken by directories.
+   b)`du -a` writes counts for all files, not just directories.
+   c)`du -s` displays only total size for each argument. If no argument given, it displays total size of curent directory.
+   d)`du -sk` displays total size in KBs
+   e)`du -sm` displays total size in MBs.
+   f)`du -sh` displays total size in appropriate unit (KB,MB,GB).
+   
+   
