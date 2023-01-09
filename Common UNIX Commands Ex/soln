@@ -44,3 +44,20 @@
      `$ mkdir xyz`
      `$ ls -ld xyz`
      `drwxrwxr-x 2 krish krish 4096 Jan  9 14:21 xyz`
+    
+12) `$ vim testfile.txt` creates the required non empty file.
+
+    `$ ls -l` 
+    `-rw-rw-r-- 1 krish krish 17 Jan  9 14:29 testfile.txt`
+    
+    `$ ln -s testfile.txt T` creates a symbolic link 'T' to 'testfile.txt'.
+    
+    `$ ls -l`
+    `lrwxrwxrwx 1 krish krish 12 Jan  9 14:50 T -> testfile.txt`    (T is light blue color here)
+    `-rw-rw-r-- 1 krish krish 17 Jan  9 14:29 testfile.txt`
+    
+    `$ chmod 000 T` changes the permissions of the file which T points to (testfile.txt).
+    
+    If a symbolic link is deleted, its target remains unaffected.
+    
+    If another symbolic link 'TT' pointing to 'testfile.txt' is created and 'testfile.txt' is removed, then the symlink is not updated or deleted, and points to the old,non-existing location.
