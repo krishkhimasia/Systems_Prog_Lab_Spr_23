@@ -61,3 +61,25 @@
     If a symbolic link is deleted, its target remains unaffected.
     
     If another symbolic link 'TT' pointing to 'testfile.txt' is created and 'testfile.txt' is removed, then the symlink is not updated or deleted, and points to the old,non-existing location.
+
+13) `$ ls -l`
+    `-rw-rw-r-- 1 krish krish 13 Jan  9 15:05 abc.txt`
+    
+    `$ ln abc.txt ABC.txt`
+    `$ ls -l`
+     `-rw-rw-r-- 2 krish krish 13 Jan  9 15:05 abc.txt`
+     `-rw-rw-r-- 2 krish krish 13 Jan  9 15:05 ABC.txt`
+     
+     Notice that the link count for both are 2.
+     After adding some lines to 'abc.txt' and seeing directory listing:
+     
+     `$ ls -l`
+     `-rw-rw-r-- 2 krish krish 47 Jan  9 15:10 abc.txt`
+     `-rw-rw-r-- 2 krish krish 47 Jan  9 15:10 ABC.txt`
+     
+     So 'ABC.txt' updates according to the changes to 'abc.txt'
+     
+     'ABC.txt' remains unnaffected after removing 'abc.txt', but its link count now becomes 1.
+     Hence, if the original file is deleted, the data still exists under the secondary hard link.
+     
+     
