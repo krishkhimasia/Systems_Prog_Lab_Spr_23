@@ -65,7 +65,7 @@ Q9)
   
     f)`du -sh` displays total size in appropriate unit (KB,MB,GB).
    
-*10) 
+*Q10) 
   
     'd' file type indicates directory.
     
@@ -73,7 +73,7 @@ Q9)
     
     'l' file type indicates symbolic link.
 
-*11) 
+*Q11) 
   
     The fifth field in the output of `ls -l` specifies the number of links or directories inside this directory.
     
@@ -87,7 +87,7 @@ Q9)
      
     `drwxrwxr-x 2 krish krish 4096 Jan  9 14:21 xyz`
     
-12) 
+Q12) 
   
     `$ vim testfile.txt` creates the required non empty file.
 
@@ -110,7 +110,7 @@ Q9)
     
     If another symbolic link 'TT' pointing to 'testfile.txt' is created and 'testfile.txt' is removed, then the symlink is not updated or deleted, and points to the old,non-existing location.
 
-13) 
+Q13) 
     `$ ls -l`
     
     `-rw-rw-r-- 1 krish krish 13 Jan  9 15:05 abc.txt`
@@ -138,7 +138,8 @@ Q9)
      'ABC.txt' remains unnaffected after removing 'abc.txt', but its link count now becomes 1.
      Hence, if the original file is deleted, the data still exists under the secondary hard link.
      
- 14)
+Q14)
+ 
     a) pwd : Prints current working directory.
      
     b) chmod -R : chmod changes file mode bits. If you use chmod on a directory, it changes permissions for thet directory, but the permissions for its contents remain unaffected. Using chmod -R will recursively change the permissions of the contents of the directory as well.
@@ -155,6 +156,8 @@ Q9)
     
     h) exit : Exits the shell.
      
-15) `$ cal 1752` prints the calendar of 1752.
-     The eleven days (3rd to 13th) here are the 'lost' 11 days of September 1752, skipped when Britain changed over from the Julian calendar to the Gregorian calendar, bringing them into line with most of Europe.
+Q15) 
+  
+    `$ cal 1752` prints the calendar of 1752.
+    The eleven days (3rd to 13th) here are the 'lost' 11 days of September 1752, skipped when Britain changed over from the Julian calendar to the Gregorian calendar, bringing them into line with most of Europe.
 </p>
