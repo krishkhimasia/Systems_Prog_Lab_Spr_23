@@ -37,3 +37,10 @@
 *10) 'd' file type indicates directory.
     'c' file type indicates character special file.
     'l' file type indicates symbolic link.
+
+*11) The fifth field in the output of `ls -l` specifies the number of links or directories inside this directory.
+     If you create a file, its link count is 1 by default.
+     If you create a directory "xyz", the default link count of it is 2. The extra count is because for every directory created, a link gets created in the parent directory to point to this new directory.
+     `$ mkdir xyz`
+     `$ ls -ld xyz`
+     `drwxrwxr-x 2 krish krish 4096 Jan  9 14:21 xyz`
