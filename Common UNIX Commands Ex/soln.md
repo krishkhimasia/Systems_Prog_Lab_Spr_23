@@ -83,7 +83,7 @@ Q9)
     
     If you create a file, its link count is 1 by default.
     
-    If you create a directory "xyz", the default link count of it is 2. The extra count is because for every directory created, a link gets created in the parent directory to point to this new directory.
+    If you create a directory "xyz", the default link count of it is 2. One is the link to itself, `.` and the other is to the parent directory, ..`
 
 ```bash
 $ mkdir xyz
