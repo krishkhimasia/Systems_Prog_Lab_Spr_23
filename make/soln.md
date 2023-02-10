@@ -96,3 +96,28 @@ two:
 	@echo $(A) $(B)
 ```
 
+Q7)
+
+makefile:
+```make
+CC=gcc
+CFLAGS=-Wall -I.
+OBJFILES= foo.o bar.o
+
+library: $(OBJFILES)
+	ar rcs libfoobar.a $(OBJFILES)
+
+$(OBJFILES): foobar.h
+
+foo.o: foo1.h foo2.h
+
+bar.o: bar1.h bar2.h
+```
+
+running makefile:
+```bash
+$ make
+gcc -Wall -I.   -c -o foo.o foo.c
+gcc -Wall -I.   -c -o bar.o bar.c
+ar rcs libfoobar.a foo.o bar.o
+```
