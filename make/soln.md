@@ -121,3 +121,33 @@ gcc -Wall -I.   -c -o foo.o foo.c
 gcc -Wall -I.   -c -o bar.o bar.c
 ar rcs libfoobar.a foo.o bar.o
 ```
+
+Q8)
+
+makefile:
+```make
+CC=gcc
+CFLAGS=-Wall -fPIC
+OBJFILES= rbasic.o rarith.o rmath.o
+
+library: $(OBJFILES)
+	gcc -shared -o librational.so $(OBJFILES)
+
+$(OBJFILES): rat.h
+
+rbasic.o: rbasic.h
+
+rarith.o: rarith.h
+
+rmath.o: CFLAGS=-Wall -fPIC -lm
+rmath.o: rmath.h
+```
+
+running makefile:
+```bash
+$ make
+gcc -Wall -fPIC   -c -o rbasic.o rbasic.c
+gcc -Wall -fPIC   -c -o rarith.o rarith.c
+gcc -Wall -fPIC -lm   -c -o rmath.o rmath.c
+gcc -shared -o librational.so rbasic.o rarith.o rmath.o
+```
