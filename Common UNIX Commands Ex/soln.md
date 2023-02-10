@@ -52,7 +52,8 @@ Q5,6,7)
 
 Q8) 
 
-    The first `wc` takes output of `ls -l` as its input, and the corresponding output is piped into the second `wc` as its input.
+    The first `wc` takes output of `ls -l` as its input, and the corresponding output is piped into the second `wc` as its
+    input.
 
 Q9) 
     
@@ -82,7 +83,8 @@ Q9)
     
     If you create a file, its link count is 1 by default.
     
-    If you create a directory "xyz", the default link count of it is 2. One is the link to itself, `.` and the other is to the parent directory, `..`
+    If you create a directory "xyz", the default link count of it is 2. One is the link to itself, `.` and the other is to
+    the parent directory, `..`
 
 ```bash
 $ mkdir xyz
@@ -118,7 +120,8 @@ $ chmod 000 T # changes the permissions of the file which T points to (testfile.
 
 # If a symbolic link is deleted, its target remains unaffected.
 
-# If another symbolic link 'TT' pointing to 'testfile.txt' is created and 'testfile.txt' is removed, then the symlink is not updated or deleted, and points to the old,non-existing location.
+# If another symbolic link 'TT' pointing to 'testfile.txt' is created and 'testfile.txt' is removed, then the symlink
+# is not updated or deleted, and points to the old,non-existing location.
 ```
 
 Q13) 
@@ -162,7 +165,9 @@ Q14)
 
     a) pwd : Prints current working directory.
      
-    b) chmod -R : chmod changes file mode bits. If you use chmod on a directory, it changes permissions for thet directory, but the permissions for its contents remain unaffected. Using chmod -R will recursively change the permissions of the contents of the directory as well.
+    b) chmod -R : chmod changes file mode bits. If you use chmod on a directory, it changes permissions for that directory,
+    but the permissions for its contents remain unaffected. Using chmod -R will recursively change the permissions of the
+    contents of the directory as well.
     
     c) chown : Changes owner of file/directory.
     
@@ -172,7 +177,8 @@ Q14)
     
     f) time : runs programns and summarizes system resource usage.
     
-    *g) strings : it extracts printable characters from files so that other commands can use the strings without non-printable characters.
+    *g) strings : it extracts printable characters from files so that other commands can use the strings without
+    non-printable characters.
     
     h) exit : Exits the shell.
 
@@ -182,6 +188,7 @@ Q15)
 $ cal 1752 # prints the calendar of 1752.
 ```
 ```
-The eleven days (3rd to 13th) here are the 'lost' 11 days of September 1752, skipped when Britain changed over from the Julian calendar to the Gregorian calendar, bringing them into line with most of Europe.
+The eleven days (3rd to 13th) here are the 'lost' 11 days of September 1752, skipped when Britain changed over from
+the Julian calendar to the Gregorian calendar, bringing them into line with most of Europe.
 ```
 
