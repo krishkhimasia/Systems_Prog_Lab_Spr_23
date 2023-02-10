@@ -123,9 +123,9 @@ $ chmod 000 T # changes the permissions of the file which T points to (testfile.
 
 Q13) 
 
-    ```bash
-    $ ls -l
-    ```
+```bash
+$ ls -l
+```
 
 ​    
 
