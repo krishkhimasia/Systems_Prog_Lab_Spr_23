@@ -1,12 +1,19 @@
 
 
-Q1)(aint done) 
+Q1)
 
-   
+Use the -n flag. It instructs make to print the commands that would be executed, but do not execute them (except  in
+            certain circumstances).
+```bash
+make -n
+```
 
 Q2) 
 
-    make -B
+Use the -B flag. It instructs make to unconditionally make all targets.
+```bash
+make -B
+```
 
 Q3)
 
