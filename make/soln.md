@@ -151,3 +151,12 @@ gcc -Wall -fPIC   -c -o rarith.o rarith.c
 gcc -Wall -fPIC -lm   -c -o rmath.o rmath.c
 gcc -shared -o librational.so rbasic.o rarith.o rmath.o
 ```
+
+Q9)
+```make
+all:
+	cd basics; make
+	cd utilities/online; make
+	cd utilities/offline; make
+	cd utilities; make
+```
