@@ -99,3 +99,15 @@ If you want to delete the variable, you can use the `unset` command:
 ```gdb
 unset $my_var
 ```
+
+
+Q10)
+
+```gdb
+//setting breakpoint 1 at line 234
+break 234
+condtion 1 p==NULL
+
+//to find n
+print n
+```
