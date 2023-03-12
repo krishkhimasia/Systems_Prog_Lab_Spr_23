@@ -169,3 +169,26 @@ x /w 0x1000  # display a word at address 0x1000
 x /i 0x1000  # display the disassembled instruction at address 0x1000
 x /s 0x1000  # display a null-terminated string at address 0x1000
 ```
+
+
+Q14)
+```gdb
+# display 5 words (4 bytes each) starting at the memory address A in hexadecimal format
+x /5wx A
+0x7fffffffdc90: 0x0000000f      0x00000010      0x00000011      0x00000000
+0x7fffffffdca0: 0x00000000
+
+# displays the 5 words (4 bytes each) starting at the memory address (A+1) in hexadecimal format
+x /5wx A+1
+0x7fffffffdc94: 0x00000010      0x00000011      0x00000000      0x00000000
+0x7fffffffdca4: 0x00000000
+
+# displays the 5 words (4 bytes each) starting at the memory address (A-1) in hexadecimal format
+x /5wx A-1
+0x7fffffffdc8c: 0x00000000      0x0000000f      0x00000010      0x00000011
+0x7fffffffdc9c: 0x00000000
+
+# displays contents of i in hexadecimal format, 0 or garbage value in this case as  is uninitialised
+x /1wx &i
+0x7fffffffdc8c: 0x00000000
+```
