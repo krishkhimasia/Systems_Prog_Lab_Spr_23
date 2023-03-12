@@ -192,3 +192,16 @@ x /5wx A-1
 x /1wx &i
 0x7fffffffdc8c: 0x00000000
 ```
+
+
+Q15)
+
+We set a breakpoint using the command `break g`. The execution pauses at line 100 (as it makes the first call of g()) and we can use the next command to scrutinize g() line by line. After this we can disable the breakpoint so it does not interrupt the program execution when g() is encountered again.
+
+
+Q16)
+
+We can set a breakpoint at line 100, and let the program run until it hits our breakpoint. At our breakpoint, we can use the step command to step into either f() or g().
+- If we step into g(), we can examine its working line by line using the next command.
+- If we step into f(), we can use finish command to skip examining f() and then using step command to step into g().
+
