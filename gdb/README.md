@@ -104,10 +104,46 @@ unset $my_var
 Q10)
 
 ```gdb
-//setting breakpoint 1 at line 234
+# setting breakpoint 1 at line 234
 break 234
 condtion 1 p==NULL
 
-//to find n
+# to find n
 print n
 ```
+
+
+Q11) binary search?
+
+
+Q12)
+
+To set a watchpoint which pauses execution when x changes its value:
+```gdb
+# to set watchpoint for a variable x
+watch x
+
+# when the variable changes its value
+Hardware watchpoint N: x
+
+Old value = ...
+New value = ...
+```
+We can list, enable/disable & delete watchpoints as follows:
+```gdb
+# to list all the watchpoints
+info watchpoints
+
+# disable/enable/delete watchpoint
+disable watchpoint N
+enable watchpoint N
+delete watchpoint N
+```
+We can also set conditional watchpoints. The following example would pause execution when x exceeds 69:
+```gdb
+# conditional watchpoints
+watch x if x>69
+```
+
+Q13)
+
