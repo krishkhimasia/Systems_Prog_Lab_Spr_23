@@ -147,3 +147,25 @@ watch x if x>69
 
 Q13)
 
+The 'x' command is used to examine memory.
+
+The syntax is : `x /[format] [length] [address]` , where:
+
+- **format** specifies the display format for the memory contents (such as x for hexadecimal, d for decimal, or c for character)
+
+- **length** specifies the number of units to display
+
+- **address** is the memory address to examine.
+
+For example, `x /x 16 0x1000` will examine 16 bytes of memory starting at address 0x1000 in hexadecimal format.
+```gdb
+# to examine contents of an integer variable var
+x /d &var
+
+# other examples
+x /t 0x1000  # display a byte at address 0x1000
+x /h 0x1000  # display a half-word at address 0x1000
+x /w 0x1000  # display a word at address 0x1000
+x /i 0x1000  # display the disassembled instruction at address 0x1000
+x /s 0x1000  # display a null-terminated string at address 0x1000
+```
