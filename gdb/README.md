@@ -201,11 +201,22 @@ We set a breakpoint using the command `break g`. The execution pauses at line 10
 
 Q16)
 
-We can set a breakpoint at line 100, and let the program run until it hits our breakpoint. At our breakpoint, we can use the step command to step into either f() or g().
-- If we step into g(), we can examine its working line by line using the next command.
-- If we step into f(), we can use finish command to skip examining f() and then using step command to step into g().
+We can set a breakpoint at line 100, and let the program run until it hits our breakpoint. At our breakpoint, we can use the `step` command to step into either f() or g().
+- If we step into g(), we can examine its working line by line using the `next` command.
+- If we step into f(), we can use `finish` command to skip examining f() and then using `step` command to step into g().
 
 
 Q17)
 
-We can set a breakpoint at line 64, and let the program run until it hits our breakpoint. At our breakpoint, we use the step command to step into the inner f(), use finish command to skip line by line examination of f(), and then use the next command to scrutinize the working of g() line by line.
+We can set a breakpoint at line 64, and let the program run until it hits our breakpoint. At our breakpoint, we use the `step` command to step into the inner f(), use `finish` command to skip line by line examination of f(), and then use the `next` command to scrutinize the working of g() line by line.
+
+
+Q18)
+
+You can set a breakpoint at Line 128 and then use gdb's `if` command to check if the value of t is non-zero before continuing execution. If **t** is *non-zero*, you can use the continue command to resume normal execution. If **t** is *zero*, you can use the `return` command to exit the current function and return to the caller (main() in this case).
+
+- Set breakpoint using `break myfunc:128`
+- When program stops at breakpoint, write this:     
+```gdb
+if t != 0 then continue else return end
+```
