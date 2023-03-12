@@ -205,3 +205,7 @@ We can set a breakpoint at line 100, and let the program run until it hits our b
 - If we step into g(), we can examine its working line by line using the next command.
 - If we step into f(), we can use finish command to skip examining f() and then using step command to step into g().
 
+
+Q17)
+
+We can set a breakpoint at line 64, and let the program run until it hits our breakpoint. At our breakpoint, we use the step command to step into the inner f(), use finish command to skip line by line examination of f(), and then use the next command to scrutinize the working of g() line by line.
