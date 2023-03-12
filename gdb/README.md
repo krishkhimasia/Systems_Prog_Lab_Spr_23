@@ -220,3 +220,6 @@ You can set a breakpoint at Line 128 and then use gdb's `if` command to check if
 ```gdb
 if t != 0 then continue else return end
 ```
+
+
+Q19)?
