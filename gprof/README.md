@@ -3,7 +3,7 @@ Q1)
 
 ```bash
 # create first profile-data file gmon.out
-gprof ./secretapp gmon.out
+./secretapp
 
 # rename it to gmon.sum
 mv gmon.out gmon.sum
