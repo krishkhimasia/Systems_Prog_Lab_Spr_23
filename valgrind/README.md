@@ -170,3 +170,72 @@ void makeCircular(node* L)
 ==98564==    still reachable: 128 bytes in 8 blocks
 ==98564==         suppressed: 0 bytes in 0 blocks
 ```
+
+Q3)
+
+The code for our BST:
+```c
+#include<stdio.h>
+
+struct node
+{
+    int data;
+    struct node *left;
+    struct node *right;
+};
+
+struct node *root = NULL;
+
+void insert(int data)
+{
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = data;
+    temp->left = NULL;
+    temp->right = NULL;
+    if(root == NULL)
+    {
+        root = temp;
+    }
+    else
+    {
+        struct node *current = root;
+        struct node *parent = NULL;
+        while(1)
+        {
+            parent = current;
+            if(data < parent->data)
+            {
+                current = current->left;
+                if(current == NULL)
+                {
+                    parent->left = temp;
+                    return;
+                }
+            }
+            else
+            {
+                current = current->right;
+                if(current == NULL)
+                {
+                    parent->right = temp;
+                    return;
+                }
+            }
+        }
+    }
+}
+
+int main()
+{
+    insert(6);
+    insert(9);
+    insert(3);
+    insert(2);
+    insert(10);
+    insert(7);
+    insert(5);
+    insert(8);
+    insert(4);
+    return 0;
+}
+```
