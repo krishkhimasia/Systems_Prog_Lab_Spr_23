@@ -65,6 +65,50 @@ A part (contiguous) of the output supplied by gprof:
 
 - f1() calls f2() 12 times, which means f1() itself was called for a total of 12 times, ∴ **x+y=12**
 
-- f3() was called by f2() 19 times and by f1() 12 times out of total 40 times, ∴ **y+z=40-19-12=9**
+- f3() was called by f2() 19 times and directly by f1() 12 times out of total 40 times, ∴ **y+z=40-19-12=9**
 
 ∴ **x=5,    y=7,    z=2**
+
+
+Q4)
+
+The gprof output contains the following:
+```gprof
+[1]     0.0     0.00      0.00      1+12      f [1]
+```
+
+Which means there have been 12 recursive calls to f(), and 1 call from main(). The recursive call happens if n>0.
+
+∴ 100-12*x<0, i.e x>100/12
+
+∴ x>8
+
+∴ **x=9**
+
+Q5)
+
+The call graph in the gprof output is as follows:
+```gprof
+index % time    self  children    called     name
+[1]      0.0    0.00    0.00       1+51      <cycle 1 as a whole> [1]
+                0.00    0.00      18             f <cycle 1> [2]
+                0.00    0.00      17             g <cycle 1> [3]
+                0.00    0.00      17             h <cycle 1> [4]
+-----------------------------------------------
+                                  17             h <cycle 1> [4]
+                0.00    0.00       1/1           main [10]
+[2]      0.0    0.00    0.00      18         f <cycle 1> [2]
+                                  17             g <cycle 1> [3]
+-----------------------------------------------
+                                  17             f <cycle 1> [2]
+[3]      0.0    0.00    0.00      17         g <cycle 1> [3]
+                                  17             h <cycle 1> [4]
+-----------------------------------------------
+                                  17             g <cycle 1> [3]
+[4]      0.0    0.00    0.00      17         h <cycle 1> [4]
+                                  17             f <cycle 1> [2]
+-----------------------------------------------
+```
+There is a cycle of calls f->g->h->f and so on. After every f->g->h, n decrements by 6, so f->g->h happens for n=100, 94, 88,...., 10, 4. That is 17 cycles.
+
+At the end of the 17th cycle, h(1) calls f(-2), which is the 18th call of f(), and no further calls are seen as n<0 now.
