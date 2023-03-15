@@ -239,3 +239,73 @@ int main()
     return 0;
 }
 ```
+
+(a) The root (6) is definitely lost.
+```valgrind
+==103527== HEAP SUMMARY:
+==103527==     in use at exit: 216 bytes in 9 blocks
+==103527==   total heap usage: 10 allocs, 1 frees, 8,824 bytes allocated
+==103527== 
+==103527== LEAK SUMMARY:
+==103527==    definitely lost: 24 bytes in 1 blocks
+==103527==    indirectly lost: 192 bytes in 8 blocks
+==103527==      possibly lost: 0 bytes in 0 blocks
+==103527==    still reachable: 0 bytes in 0 blocks
+==103527==         suppressed: 0 bytes in 0 blocks
+```
+
+(b) need to complete
+```valgrind
+==103733== HEAP SUMMARY:
+==103733==     in use at exit: 192 bytes in 8 blocks
+==103733==   total heap usage: 10 allocs, 2 frees, 8,880 bytes allocated
+==103733== 
+==103733== LEAK SUMMARY:
+==103733==    definitely lost: 48 bytes in 2 blocks
+==103733==    indirectly lost: 144 bytes in 6 blocks
+==103733==      possibly lost: 0 bytes in 0 blocks
+==103733==    still reachable: 0 bytes in 0 blocks
+==103733==         suppressed: 0 bytes in 0 blocks
+```
+
+(c) need to complete
+```valgrind
+==103869== HEAP SUMMARY:
+==103869==     in use at exit: 216 bytes in 9 blocks
+==103869==   total heap usage: 10 allocs, 1 frees, 8,840 bytes allocated
+==103869== 
+==103869== LEAK SUMMARY:
+==103869==    definitely lost: 48 bytes in 2 blocks
+==103869==    indirectly lost: 144 bytes in 6 blocks
+==103869==      possibly lost: 0 bytes in 0 blocks
+==103869==    still reachable: 24 bytes in 1 blocks
+==103869==         suppressed: 0 bytes in 0 blocks
+```
+
+(d) need to complete
+```valgrind
+==104022== HEAP SUMMARY:
+==104022==     in use at exit: 168 bytes in 7 blocks
+==104022==   total heap usage: 10 allocs, 3 frees, 8,936 bytes allocated
+==104022== 
+==104022== LEAK SUMMARY:
+==104022==    definitely lost: 96 bytes in 4 blocks
+==104022==    indirectly lost: 48 bytes in 2 blocks
+==104022==      possibly lost: 0 bytes in 0 blocks
+==104022==    still reachable: 24 bytes in 1 blocks
+==104022==         suppressed: 0 bytes in 0 blocks
+```
+
+(e) need to complete
+```valgrind
+==104113== HEAP SUMMARY:
+==104113==     in use at exit: 144 bytes in 6 blocks
+==104113==   total heap usage: 10 allocs, 4 frees, 8,952 bytes allocated
+==104113== 
+==104113== LEAK SUMMARY:
+==104113==    definitely lost: 96 bytes in 4 blocks
+==104113==    indirectly lost: 48 bytes in 2 blocks
+==104113==      possibly lost: 0 bytes in 0 blocks
+==104113==    still reachable: 0 bytes in 0 blocks
+==104113==         suppressed: 0 bytes in 0 blocks
+```
