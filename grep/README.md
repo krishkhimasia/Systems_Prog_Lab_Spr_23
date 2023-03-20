@@ -45,5 +45,5 @@ grep '.*foo..*bar.*' example.txt
 
 Q3) Obviously the printf will occur first in line (or after some tabs)
 ```grep
-grep '[<TAB>]*printf' example.c
+grep '^[<TAB>]*printf' example.c
 ```
