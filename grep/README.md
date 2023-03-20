@@ -47,3 +47,24 @@ Q3) Obviously the printf will occur first in line (or after some tabs)
 ```grep
 grep '^[<TAB>]*printf' example.c
 ```
+
+Q4?)
+
+Q5)
+
+(a) 
+```grep
+grep -v '876' foonums.txt
+```
+(b) 
+```grep
+grep -w -v -e '[5-9][0-9][0-9]' -e '[1-4][0-9][0-9][0-9]' -e '5000' foonums.txt
+```
+(c?) 
+```grep
+
+```
+(d?)
+```grep
+
+```
