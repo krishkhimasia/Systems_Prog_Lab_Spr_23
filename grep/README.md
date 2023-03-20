@@ -2,7 +2,7 @@ Q1)
 
 (a) [^AEIOUaeiou]
 
-(b) [^AEIOUaeiou]+
+(b) [^AEIOUaeiou][^AEIOUaeiou]*
 
 (c) [^AEIOUaeiou]\* [AEIOUaeiou] [^AEIOUaeiou]\*
 
@@ -14,10 +14,33 @@ Q1)
 
 (g) ^[A-Za-z]*$
 
-(h) 0x[0-9A-Fa-f]+
+(h) 0x[0-9A-Fa-f][0-9A-Fa-f]\*
 
 (i) ^(.* ){10,}.*$
 
 (j) ^(.*[^ ]){10,}.$
 
+Q2)
 
+(a) 
+```grep
+grep '^[  ].*' example.txt
+```
+(b) 
+```grep
+grep -e 'foo' -e 'bar' example.txt
+```
+(c) 
+```grep
+grep -e '.*foo.*bar.*' -e '.*bar.*foo.*' example.txt
+```
+(d) 
+```grep
+grep '.*foobar.*' example.txt
+```
+(e) Both "**foobar bar**" and "**foo foobar**" will match.
+```grep
+grep '.*foo..*bar.*' example.txt
+```
+
+Q3)
