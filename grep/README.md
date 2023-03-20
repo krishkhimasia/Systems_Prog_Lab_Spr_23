@@ -23,28 +23,28 @@ Q1)
 Q2)
 
 (a) 
-```grep
+```bash
 grep '^[<TAB>].*' example.txt
 ```
 (b) 
-```grep
+```bash
 grep -e 'foo' -e 'bar' example.txt
 ```
 (c) 
-```grep
+```bash
 grep -e '.*foo.*bar.*' -e '.*bar.*foo.*' example.txt
 ```
 (d) 
-```grep
+```bash
 grep '.*foobar.*' example.txt
 ```
 (e) Both "**foobar bar**" and "**foo foobar**" will match.
-```grep
+```bash
 grep '.*foo..*bar.*' example.txt
 ```
 
 Q3) Obviously the printf will occur first in line (or after some tabs)
-```grep
+```bash
 grep '^[<TAB>]*printf' example.c
 ```
 
@@ -53,11 +53,11 @@ Q4?)
 Q5)
 
 (a) 
-```grep
+```bash
 grep -v '876' foonums.txt
 ```
 (b) 
-```grep
+```bash
 grep -w -v -e '[5-9][0-9][0-9]' -e '[1-4][0-9][0-9][0-9]' -e '5000' foonums.txt
 ```
 (c?) 
@@ -77,4 +77,16 @@ ls -l | grep '^...x'
 Q7)
 ```bash
 ls -l | grep '.* .* .* .* [1-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*'
+```
+
+Q8)
+
+(a)
+```bash
+grep '^....:x:' /etc/passwd
+```
+
+(b)
+```bash
+grep '/bin/bash$' /etc/passwd
 ```
