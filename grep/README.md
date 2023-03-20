@@ -90,3 +90,9 @@ grep '^....:x:' /etc/passwd
 ```bash
 grep '/bin/bash$' /etc/passwd
 ```
+
+Q9)
+
+- The -o option prints only the matched (non-empty) parts of a matching line, with each such part on a separate output line.
+- The -n option prefixes each line of output with the 1-based line number within its input file.
+- Running grep with the above 2 options together works as expected, if the pattern is found multiple times in the same line, the same line number with corresponding match is printed multiple times. 
