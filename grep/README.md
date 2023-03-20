@@ -24,7 +24,7 @@ Q2)
 
 (a) 
 ```grep
-grep '^[  ].*' example.txt
+grep '^[<TAB>].*' example.txt
 ```
 (b) 
 ```grep
@@ -43,4 +43,7 @@ grep '.*foobar.*' example.txt
 grep '.*foo..*bar.*' example.txt
 ```
 
-Q3)
+Q3) Obviously the printf will occur first in line (or after some tabs)
+```grep
+grep '[<TAB>]*printf' example.c
+```
