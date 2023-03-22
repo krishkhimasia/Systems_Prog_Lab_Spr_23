@@ -61,3 +61,33 @@ END{
     }
 }
 ```
+
+Q4)
+```gawk
+# sortsauropods.awk
+BEGIN {
+    FS = ":"
+}
+
+{
+    if ($2=="sauropod") {
+        ind=index($6,"-")
+        if(ind==0) {
+            liv=int($6)
+        }
+        else {
+            l=int(substr($6,1,ind-1))
+            r=int(substr($6,ind+1, length($6)-ind))
+            liv=((l+r)/2)
+        }
+        A[liv] = A[liv] "\n" $1 ":\n\tLiving time: " liv " million years ago\n\tLength: " $3
+    }
+}
+
+END{
+    asorti(A, B)
+    for (i in B) {
+        print A[B[i]]
+    }
+}
+```
