@@ -25,3 +25,15 @@ if ((ts <= 252) && (te >= 201)) { nt++; sumt += $3 }
         }
     }
 ```
+
+Q2) Change the END block as follows:
+- asorti(tlist,nlist) creates sorted array 'nlist' of the indices of tlist.
+- Use this array to print nlist in order of countries sorted alphabetically.
+```gawk
+END {
+    asorti(tlist,nlist)
+    for (c in nlist) {
+        printf("%-15s: %s\n", nlist[c], tlist[nlist[c]])
+    }
+}
+```
