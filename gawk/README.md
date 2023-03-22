@@ -37,3 +37,27 @@ END {
     }
 }
 ```
+
+Q3)
+
+```gawk
+# dinotypes.awk
+BEGIN{
+    FS = ":"
+}
+
+{
+    A[$2]=A[$2] "," $1
+}
+
+END{
+    for (i in A) {
+        print i ":"
+        size = split(A[i], B, ",")
+        for (j = 2; j <= size; j++) {
+            print "\t" B[j]
+        }
+        print "Total count = " size-1 "\n"
+    }
+}
+```
