@@ -96,7 +96,7 @@ Q5)
 ```gawk
 #nonsys.awk
 BEGIN{
-    FS=":"
+    FS = ":"
     print "Non-system users:-"
 }
 {
@@ -107,4 +107,20 @@ BEGIN{
 ```
 
 Q6)
+```gawk
+BEGIN{
+    FS = ":"
+}
 
+{
+    shells[$7]=shells[$7] " " $1
+}
+
+END{
+    for(shell in shells)
+    {
+        print "login shell: " shell
+        print "\t" shells[shell]
+    }
+}
+```
