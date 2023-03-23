@@ -91,3 +91,20 @@ END{
     }
 }
 ```
+
+Q5)
+```gawk
+#nonsys.awk
+BEGIN{
+    FS=":"
+    print "Non-system users:-"
+}
+{
+    if(int($3) >= 1000){
+        print $1
+    }
+}
+```
+
+Q6)
+
